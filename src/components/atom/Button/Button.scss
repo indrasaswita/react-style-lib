@@ -1,0 +1,28 @@
+// @import '../../../styles/mixins/button.mixin.scss';
+
+.is-button {
+	font-size: inherit;
+
+	&.align {
+		&-center {
+			text-align: center;
+		}
+		&-left {
+			text-align: left;
+		}
+		&-right {
+			text-align: right;
+		}
+	}
+
+	&.disabled {
+		cursor: default;
+	}
+
+
+	// @include button-default(#af3);
+	color: #f00 !important;
+
+}
+
+

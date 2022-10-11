@@ -1,1 +1,1 @@
-export { default as Button } from './atom/Button'
+export { default as Button, EnumButton } from './atom/Button'
