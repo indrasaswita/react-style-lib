@@ -1,4 +1,15 @@
-// @import '../../../styles/mixins/button.mixin.scss';
+@import '../../../styles/mixins/button.mixin.scss';
+
+
+:root {
+	--default-color-default: #00695c;
+	--default-color-primary: #4285F4;
+	--default-color-secondary: #aa66cc;
+	--default-color-success: #00C851;
+	--default-color-danger: #ff4444;
+	--default-color-info: #33b5e5;
+	--default-color-warning: #ffbb33;
+}
 
 .is-button {
 	font-size: inherit;
@@ -20,8 +31,12 @@
 	}
 
 
-	// @include button-default(#af3);
-	color: #f00 !important;
+	&.primary { @include button-default(var(--default-color-primary)); }
+	&.success { @include button-default(var(--default-color-success)); }
+	&.danger { @include button-default(var(--default-color-danger)); }
+	&.warning { @include button-default(var(--default-color-warning)); }
+	&.info { @include button-default(var(--default-color-info)); }
+
 
 }
 

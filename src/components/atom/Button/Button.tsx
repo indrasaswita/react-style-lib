@@ -1,6 +1,7 @@
 import React, { CSSProperties } from "react"
 import { EnumButton } from "./Button.enum"
 import "./Button.css"
+import Wrapper from "./Button.style"
 
 type ButtonProps = {
 	children?: React.ReactNode,
@@ -16,7 +17,7 @@ const Button
 	: React.FC<ButtonProps>
 	= (props: ButtonProps) => {
 		return (
-			<button
+			<Wrapper
 				className={
 					"is-button"
 					+ (props.className
@@ -27,6 +28,9 @@ const Button
 						: " align-center")
 					+ (props.disabled
 						? " disabled"
+						: "")
+					+ (props.theme
+						? " " + props.theme
 						: "")
 				}
 				style={props.style}
@@ -39,7 +43,7 @@ const Button
 				// textAlign={props.textAlign || "center"}
 			>
 				{props.children}
-			</button>
+			</Wrapper>
 		)
 	}
 

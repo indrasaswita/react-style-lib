@@ -1,22 +1,28 @@
 const MainColor
 	: {
+		default: string,
 		primary: string,
+		secondary: string,
 		success: string,
 		danger: string,
 		info: string,
 		warning: string,
 	}
 	= {
-		primary: "#2df",
-		success: "#2f9",
-		danger: "#f18",
-		info: "#ce0",
-		warning: "#fa3",
+		default: "#00695c",
+		primary: "#4285F4",
+		secondary: "#aa66cc",
+		success: "#00C851",
+		danger: "#ff4444",
+		info: "#33b5e5",
+		warning: "#ffbb33",
 	}
 
 export const VARS
 	: {
+		default: string,
 		primary: string,
+		secondary: string,
 		success: string,
 		danger: string,
 		info: string,
@@ -40,7 +46,9 @@ export const VARS
 		}
 	}
 	= {
+		default: MainColor.default,
 		primary: MainColor.primary,
+		secondary: MainColor.secondary,
 		success: MainColor.success,
 		danger: MainColor.danger,
 		info: MainColor.info,
