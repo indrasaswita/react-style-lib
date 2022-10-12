@@ -1,5 +1,4 @@
 node_modules
 dist
-.storybook
-*/**/**.css
-*/**/**.css.map
+*/**/components/**/**.css
+*/**/components/**/**.css.map

@@ -1,14 +1,32 @@
-@mixin button-default ($color) {
-	background-color: $color;
-	color: black;
-	border-style: solid;
-	border-color: #777;
+@mixin button-standard ($bg-color, $bg-color-hover, $fr-color) {
+	background-color: $bg-color;
+	color: $fr-color;
 
 	&:hover,
 	&:focus {
-		background-color: lighten($color, 14%);
-		color: black;
-		border-color: white;
-		box-shadow: 0px 0px 20px rgb(255 255 255 / 40%)
+		background-color: $bg-color-hover;
+		color: $fr-color;
+	}
+}
+
+@mixin button-outlined ($bg-color, $bg-color-hover, $fr-color) {
+	color: $bg-color;
+	background-color: $fr-color;
+	border: 1px solid $bg-color;
+
+	&:hover,
+	&:focus {
+		background-color: $bg-color-hover;
+		color: $fr-color;
+	}
+}
+
+@mixin button-transparent ($bg-color, $bg-color-hover, $fr-color) {
+	color: #777A;
+	background-color: transparent;
+
+	&:hover,
+	&:focus {
+		color: $bg-color-hover;
 	}
 }

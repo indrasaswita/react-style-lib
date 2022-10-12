@@ -1,20 +1,16 @@
 export enum EnumButton {
-	Transparent="transparent",
-	TransparentPrimary="transparent-primary",
-	TransparentSuccess="transparent-success",
-	TransparentDanger="transparent-danger",
-	TransparentWarning="transparent-warning",
-	TransparentInfo="transparent-info",
-	TransparentDark="transparent-dark",
+	Default="default",
 	Primary="primary",
-	PrimaryOutlined="primary-outlined",
+	Secondary="secondary",
 	Success="success",
-	SuccessOutlined="success-outlined",
 	Danger="danger",
-	DangerOutlined="danger-outlined",
 	Warning="warning",
-	WarningOutlined="warning-outlined",
 	Info="info",
-	InfoOutlined="info-outlined",
 	Muted="muted",
+}
+
+export enum EnumButtonType {
+	Standard="standard",
+	Outlined="outlined",
+	Transparent="transparent",
 }

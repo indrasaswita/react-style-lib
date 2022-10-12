@@ -1,43 +1,239 @@
 @import '../../../styles/mixins/button.mixin.scss';
-
-
-:root {
-	--default-color-default: #00695c;
-	--default-color-primary: #4285F4;
-	--default-color-secondary: #aa66cc;
-	--default-color-success: #00C851;
-	--default-color-danger: #ff4444;
-	--default-color-info: #33b5e5;
-	--default-color-warning: #ffbb33;
-}
+@import "../../App.scss";
 
 .is-button {
-	font-size: inherit;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	min-width: 240px;
+	margin: 0;
+	padding: calc(5px + .3vw) calc(9px + .6vw);
+	border: 0;
+	outline: 0;
+	line-height: 1.15;
+	border-radius: 8px;
+	transition: .2s all;
 
-	&.align {
-		&-center {
-			text-align: center;
+	.is-button-text {
+		font-size: inherit;
+		font-weight: 600;
+		flex: 1;
+
+		&.align {
+			&-center {
+				text-align: center;
+			}
+			&-left {
+				text-align: left;
+			}
+			&-right {
+				text-align: right;
+			}
 		}
-		&-left {
-			text-align: left;
+	}
+
+	&:not(.disabled) {
+		cursor: pointer;
+
+		&.theme-default {
+			&.type-standard {
+				@include button-standard (
+					var(--default-color-default), 
+					var(--default-color-default-light10), 
+					var(--default-color-default-inverse)
+				);
+			}
+			&.type-outlined {
+				@include button-outlined (
+					var(--default-color-default), 
+					var(--default-color-default-light10), 
+					var(--default-color-default-inverse)
+				);
+			}
+			&.type-transparent {
+				@include button-transparent (
+					var(--default-color-default), 
+					var(--default-color-default-light10), 
+					var(--default-color-default-inverse)
+				);
+			}
 		}
-		&-right {
-			text-align: right;
+
+		&.theme-primary {
+			&.type-standard {
+				@include button-standard (
+					var(--default-color-primary), 
+					var(--default-color-primary-light10), 
+					var(--default-color-primary-inverse)
+				);
+			}
+			&.type-outlined {
+				@include button-outlined (
+					var(--default-color-primary), 
+					var(--default-color-primary-light10), 
+					var(--default-color-primary-inverse)
+				);
+			}
+			&.type-transparent {
+				@include button-transparent (
+					var(--default-color-primary), 
+					var(--default-color-primary-light10), 
+					var(--default-color-primary-inverse)
+				);
+			}
+		}
+
+		&.theme-secondary {
+			&.type-standard {
+				@include button-standard (
+					var(--default-color-secondary), 
+					var(--default-color-secondary-light10), 
+					var(--default-color-secondary-inverse)
+				);
+			}
+			&.type-outlined {
+				@include button-outlined (
+					var(--default-color-secondary), 
+					var(--default-color-secondary-light10), 
+					var(--default-color-secondary-inverse)
+				);
+			}
+			&.type-transparent {
+				@include button-transparent (
+					var(--default-color-secondary), 
+					var(--default-color-secondary-light10), 
+					var(--default-color-secondary-inverse)
+				);
+			}
+		}
+
+		&.theme-success {
+			&.type-standard {
+				@include button-standard (
+					var(--default-color-success), 
+					var(--default-color-success-light10), 
+					var(--default-color-success-inverse)
+				);
+			}
+			&.type-outlined {
+				@include button-outlined (
+					var(--default-color-success), 
+					var(--default-color-success-light10), 
+					var(--default-color-success-inverse)
+				);
+			}
+			&.type-transparent {
+				@include button-transparent (
+					var(--default-color-success), 
+					var(--default-color-success-light10), 
+					var(--default-color-success-inverse)
+				);
+			}
+		}
+
+		&.theme-danger {
+			&.type-standard {
+				@include button-standard (
+					var(--default-color-danger), 
+					var(--default-color-danger-light10), 
+					var(--default-color-danger-inverse)
+				);
+			}
+			&.type-outlined {
+				@include button-outlined (
+					var(--default-color-danger), 
+					var(--default-color-danger-light10), 
+					var(--default-color-danger-inverse)
+				);
+			}
+			&.type-transparent {
+				@include button-transparent (
+					var(--default-color-danger), 
+					var(--default-color-danger-light10), 
+					var(--default-color-danger-inverse)
+				);
+			}
+		}
+
+		&.theme-warning {
+			&.type-standard {
+				@include button-standard (
+					var(--default-color-warning), 
+					var(--default-color-warning-light10), 
+					var(--default-color-warning-inverse)
+				);
+			}
+			&.type-outlined {
+				@include button-outlined (
+					var(--default-color-warning), 
+					var(--default-color-warning-light10), 
+					var(--default-color-warning-inverse)
+				);
+			}
+			&.type-transparent {
+				@include button-transparent (
+					var(--default-color-warning), 
+					var(--default-color-warning-light10), 
+					var(--default-color-warning-inverse)
+				);
+			}
+		}
+
+		&.theme-info {
+			&.type-standard {
+				@include button-standard (
+					var(--default-color-info), 
+					var(--default-color-info-light10), 
+					var(--default-color-info-inverse)
+				);
+			}
+			&.type-outlined {
+				@include button-outlined (
+					var(--default-color-info), 
+					var(--default-color-info-light10), 
+					var(--default-color-info-inverse)
+				);
+			}
+			&.type-transparent {
+				@include button-transparent (
+					var(--default-color-info), 
+					var(--default-color-info-light10), 
+					var(--default-color-info-inverse)
+				);
+			}
+		}
+
+		&.theme-muted {
+			&.type-standard {
+				@include button-standard (
+					var(--default-color-muted), 
+					var(--default-color-muted-light10), 
+					var(--default-color-muted-inverse)
+				);
+			}
+			&.type-outlined {
+				@include button-outlined (
+					var(--default-color-muted), 
+					var(--default-color-muted-light10), 
+					var(--default-color-muted-inverse)
+				);
+			}
+			&.type-transparent {
+				@include button-transparent (
+					var(--default-color-muted), 
+					var(--default-color-muted-light10), 
+					var(--default-color-muted-inverse)
+				);
+			}
 		}
 	}
 
 	&.disabled {
-		cursor: default;
+		cursor: no-drop;
+		cursor: not-allowed;
+		color: #777C;
+		background-color: #7772;
 	}
-
-
-	&.primary { @include button-default(var(--default-color-primary)); }
-	&.success { @include button-default(var(--default-color-success)); }
-	&.danger { @include button-default(var(--default-color-danger)); }
-	&.warning { @include button-default(var(--default-color-warning)); }
-	&.info { @include button-default(var(--default-color-info)); }
-
-
 }
 
 

@@ -11,45 +11,54 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-
-const buttonThemes
-	: EnumButton[]
-	= [
-		EnumButton.Primary,
-		EnumButton.Success,
-		EnumButton.Danger,
-		EnumButton.Warning,
-		EnumButton.Info,
-	]
-
-const Template: ComponentStory<typeof Button> = (args) => {
+const Template: ComponentStory<typeof Button> = (args: any) => {
 	return (
-		<>
-			{buttonThemes
+		<div
+			style={{
+				display: "flex",
+				flexDirection: "column",
+				gap: "calc(5px + .4vw)",
+			}}
+		>
+			{new Array(3)
+				.fill(0)
 				.map((
-					theme: EnumButton,
+					_: number,
 					index: number
 				) => {
 					return (
 						<Button 
 							key={index}
-							theme={theme}
-							{...args} 
+							{...args}
+							style={{
+								fontSize: (70 + index * 30) + "%",
+							}}
+							leftIcon={"🙂"}
+							rightIcon={"🙂"}
 						>
-							{theme}
+							Font Size: {(70 + index * 30) + "%"}
 						</Button>
 					)
 				})}
-		</>
+		</div>
 	)
 }
 
 export const Default = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Default.args = {
-  // children: 'Primary',
-};
+export const Primary = Template.bind({});
+export const Secondary = Template.bind({});
+export const Danger = Template.bind({});
+export const Warning = Template.bind({});
+export const Success = Template.bind({});
+export const Info = Template.bind({});
+export const Muted = Template.bind({});
 
-Default.args = {
-  // children: 'Primary',
-};
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Default.args = { theme: EnumButton.Default };
+Primary.args = { theme: EnumButton.Primary };
+Secondary.args = { theme: EnumButton.Secondary };
+Danger.args = { theme: EnumButton.Danger };
+Warning.args = { theme: EnumButton.Warning };
+Success.args = { theme: EnumButton.Success };
+Info.args = { theme: EnumButton.Info };
+Muted.args = { theme: EnumButton.Muted };
