@@ -1,0 +1,61 @@
+@import '../../../styles/mixins/alert.mixin.scss';
+@import "../../App.scss";
+
+.is-alert {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: calc(2px + .2vw);
+	min-width: 240px;
+	margin: 0;
+	padding: calc(5px + .3vw) calc(9px + .6vw);
+	border: 0;
+	outline: 0;
+	line-height: 1.15;
+	border-radius: 8px;
+	transition: .2s all;
+
+	.is-alert-text {
+		font-size: inherit;
+		font-weight: 600;
+		flex: 1;
+
+		&.align {
+			&-center {
+				text-align: center;
+			}
+			&-left {
+				text-align: left;
+			}
+			&-right {
+				text-align: right;
+			}
+		}
+	}
+
+	@each $theme in $themes {
+		&.theme-#{$theme} {
+			@each $type in $types {
+				&.type-#{$type} {
+					@include alert-mixin (
+						#{$type},
+						var(--is-color-#{$theme}), 
+						var(--is-color-#{$theme}-light10), 
+						var(--is-color-#{$theme}-inverse)
+					);
+				}
+			}
+		}
+	}
+
+	.close-action {
+		opacity: .8;
+		transition: .2s all;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+			transform: scale(1.2);
+		}
+	}
+}

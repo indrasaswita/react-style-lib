@@ -1,12 +1,12 @@
 import React, { CSSProperties } from "react"
-import { EnumButton, EnumButtonType } from "./Button.enum"
 import "./Button.css"
+import { EnumTheme, EnumType } from "../../shared"
 
-type ButtonProps = {
+export type ButtonProps = {
 	children?: React.ReactNode,
 	onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
-	theme?: EnumButton,
-	type?: EnumButtonType,
+	theme?: EnumTheme,
+	type?: EnumType,
 	disabled?: boolean,
 	textAlign?: "left" | "center" | "right",
 	className?: string,
@@ -67,5 +67,12 @@ const Button
 			</button>
 		)
 	}
+
+Button.displayName = "Button"
+Button.defaultProps = {
+	theme: EnumTheme.Default,
+	textAlign: "center",
+	disabled: false,
+}
 
 export default Button

@@ -1,4 +1,4 @@
-export enum EnumButton {
+export enum EnumTheme {
 	Default="default",
 	Primary="primary",
 	Secondary="secondary",
@@ -7,10 +7,4 @@ export enum EnumButton {
 	Warning="warning",
 	Info="info",
 	Muted="muted",
-}
-
-export enum EnumButtonType {
-	Standard="standard",
-	Outlined="outlined",
-	Transparent="transparent",
 }

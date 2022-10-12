@@ -1,2 +1,1 @@
-export { default } from "./Button"
-export { EnumButton } from "./Button.enum"
+export { default, ButtonProps } from "./Button"

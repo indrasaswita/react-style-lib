@@ -1,28 +1,32 @@
 :root {
-	--default-color-default: #00695c;
-	--default-color-primary: #4285F4;
-	--default-color-secondary: #aa66cc;
-	--default-color-success: #00C851;
-	--default-color-danger: #ff4444;
-	--default-color-info: #33b5e5;
-	--default-color-warning: #ffbb33;
-	--default-color-muted: #777;
+	--is-color-default: #00695c;
+	--is-color-primary: #4285F4;
+	--is-color-secondary: #aa66cc;
+	--is-color-success: #00C851;
+	--is-color-danger: #ff4444;
+	--is-color-warning: #ffbb33;
+	--is-color-info: #33b5e5;
+	--is-color-muted: #777;
 	
-	--default-color-default-inverse: #FFF;
-	--default-color-primary-inverse: #FFF;
-	--default-color-secondary-inverse: #FFF;
-	--default-color-success-inverse: #FFF;
-	--default-color-danger-inverse: #FFF;
-	--default-color-info-inverse: #FFF;
-	--default-color-warning-inverse: #FFF;
-	--default-color-muted-inverse: #FFF;
+	--is-color-default-inverse: #FFF;
+	--is-color-primary-inverse: #FFF;
+	--is-color-secondary-inverse: #FFF;
+	--is-color-success-inverse: #FFF;
+	--is-color-danger-inverse: #FFF;
+	--is-color-warning-inverse: #FFF;
+	--is-color-info-inverse: #FFF;
+	--is-color-muted-inverse: #FFF;
 
-	--default-color-default-light10: #{darken(#00695c, 10%)};
-	--default-color-primary-light10: #{darken(#4285F4, 10%)};
-	--default-color-secondary-light10: #{darken(#aa66cc, 10%)};
-	--default-color-success-light10: #{darken(#00C851, 10%)};
-	--default-color-danger-light10: #{darken(#ff4444, 10%)};
-	--default-color-info-light10: #{darken(#33b5e5, 10%)};
-	--default-color-warning-light10: #{darken(#ffbb33, 10%)};
-	--default-color-muted-light10: #{darken(#777, 10%)};
+	--is-color-default-light10: #{darken(#00695c, 10%)};
+	--is-color-primary-light10: #{darken(#4285F4, 10%)};
+	--is-color-secondary-light10: #{darken(#aa66cc, 10%)};
+	--is-color-success-light10: #{darken(#00C851, 10%)};
+	--is-color-danger-light10: #{darken(#ff4444, 10%)};
+	--is-color-warning-light10: #{darken(#ffbb33, 10%)};
+	--is-color-info-light10: #{darken(#33b5e5, 10%)};
+	--is-color-muted-light10: #{darken(#777, 10%)};
 }
+
+$themes: "default", primary, secondary, success, danger, warning, info, muted !default;
+$types: standard, outlined, "transparent" !default;
+

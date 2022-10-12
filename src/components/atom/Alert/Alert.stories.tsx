@@ -1,17 +1,17 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Button from './Button';
+import Alert from './Alert';
 import { EnumTheme } from '../../shared';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'is-style/Button',
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: 'is-style/Alert',
+  component: Alert,
+} as ComponentMeta<typeof Alert>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args: any) => {
+const Template: ComponentStory<typeof Alert> = (args: any) => {
 	return (
 		<div
 			style={{
@@ -27,17 +27,16 @@ const Template: ComponentStory<typeof Button> = (args: any) => {
 					index: number
 				) => {
 					return (
-						<Button 
+						<Alert 
 							key={index}
 							{...args}
 							style={{
 								fontSize: (70 + index * 30) + "%",
 							}}
 							leftIcon={"🙂"}
-							rightIcon={"🙂"}
 						>
 							Font Size: {(70 + index * 30) + "%"}
-						</Button>
+						</Alert>
 					)
 				})}
 		</div>

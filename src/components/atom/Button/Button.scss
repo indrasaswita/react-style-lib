@@ -5,6 +5,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	gap: calc(2px + .2vw);
 	min-width: 240px;
 	margin: 0;
 	padding: calc(5px + .3vw) calc(9px + .6vw);
@@ -35,195 +36,18 @@
 	&:not(.disabled) {
 		cursor: pointer;
 
-		&.theme-default {
-			&.type-standard {
-				@include button-standard (
-					var(--default-color-default), 
-					var(--default-color-default-light10), 
-					var(--default-color-default-inverse)
-				);
-			}
-			&.type-outlined {
-				@include button-outlined (
-					var(--default-color-default), 
-					var(--default-color-default-light10), 
-					var(--default-color-default-inverse)
-				);
-			}
-			&.type-transparent {
-				@include button-transparent (
-					var(--default-color-default), 
-					var(--default-color-default-light10), 
-					var(--default-color-default-inverse)
-				);
-			}
-		}
-
-		&.theme-primary {
-			&.type-standard {
-				@include button-standard (
-					var(--default-color-primary), 
-					var(--default-color-primary-light10), 
-					var(--default-color-primary-inverse)
-				);
-			}
-			&.type-outlined {
-				@include button-outlined (
-					var(--default-color-primary), 
-					var(--default-color-primary-light10), 
-					var(--default-color-primary-inverse)
-				);
-			}
-			&.type-transparent {
-				@include button-transparent (
-					var(--default-color-primary), 
-					var(--default-color-primary-light10), 
-					var(--default-color-primary-inverse)
-				);
-			}
-		}
-
-		&.theme-secondary {
-			&.type-standard {
-				@include button-standard (
-					var(--default-color-secondary), 
-					var(--default-color-secondary-light10), 
-					var(--default-color-secondary-inverse)
-				);
-			}
-			&.type-outlined {
-				@include button-outlined (
-					var(--default-color-secondary), 
-					var(--default-color-secondary-light10), 
-					var(--default-color-secondary-inverse)
-				);
-			}
-			&.type-transparent {
-				@include button-transparent (
-					var(--default-color-secondary), 
-					var(--default-color-secondary-light10), 
-					var(--default-color-secondary-inverse)
-				);
-			}
-		}
-
-		&.theme-success {
-			&.type-standard {
-				@include button-standard (
-					var(--default-color-success), 
-					var(--default-color-success-light10), 
-					var(--default-color-success-inverse)
-				);
-			}
-			&.type-outlined {
-				@include button-outlined (
-					var(--default-color-success), 
-					var(--default-color-success-light10), 
-					var(--default-color-success-inverse)
-				);
-			}
-			&.type-transparent {
-				@include button-transparent (
-					var(--default-color-success), 
-					var(--default-color-success-light10), 
-					var(--default-color-success-inverse)
-				);
-			}
-		}
-
-		&.theme-danger {
-			&.type-standard {
-				@include button-standard (
-					var(--default-color-danger), 
-					var(--default-color-danger-light10), 
-					var(--default-color-danger-inverse)
-				);
-			}
-			&.type-outlined {
-				@include button-outlined (
-					var(--default-color-danger), 
-					var(--default-color-danger-light10), 
-					var(--default-color-danger-inverse)
-				);
-			}
-			&.type-transparent {
-				@include button-transparent (
-					var(--default-color-danger), 
-					var(--default-color-danger-light10), 
-					var(--default-color-danger-inverse)
-				);
-			}
-		}
-
-		&.theme-warning {
-			&.type-standard {
-				@include button-standard (
-					var(--default-color-warning), 
-					var(--default-color-warning-light10), 
-					var(--default-color-warning-inverse)
-				);
-			}
-			&.type-outlined {
-				@include button-outlined (
-					var(--default-color-warning), 
-					var(--default-color-warning-light10), 
-					var(--default-color-warning-inverse)
-				);
-			}
-			&.type-transparent {
-				@include button-transparent (
-					var(--default-color-warning), 
-					var(--default-color-warning-light10), 
-					var(--default-color-warning-inverse)
-				);
-			}
-		}
-
-		&.theme-info {
-			&.type-standard {
-				@include button-standard (
-					var(--default-color-info), 
-					var(--default-color-info-light10), 
-					var(--default-color-info-inverse)
-				);
-			}
-			&.type-outlined {
-				@include button-outlined (
-					var(--default-color-info), 
-					var(--default-color-info-light10), 
-					var(--default-color-info-inverse)
-				);
-			}
-			&.type-transparent {
-				@include button-transparent (
-					var(--default-color-info), 
-					var(--default-color-info-light10), 
-					var(--default-color-info-inverse)
-				);
-			}
-		}
-
-		&.theme-muted {
-			&.type-standard {
-				@include button-standard (
-					var(--default-color-muted), 
-					var(--default-color-muted-light10), 
-					var(--default-color-muted-inverse)
-				);
-			}
-			&.type-outlined {
-				@include button-outlined (
-					var(--default-color-muted), 
-					var(--default-color-muted-light10), 
-					var(--default-color-muted-inverse)
-				);
-			}
-			&.type-transparent {
-				@include button-transparent (
-					var(--default-color-muted), 
-					var(--default-color-muted-light10), 
-					var(--default-color-muted-inverse)
-				);
+		@each $theme in $themes {
+			&.theme-#{$theme} {
+				@each $type in $types {
+					&.type-#{$type} {
+						@include button-mixin (
+							#{$type},
+							var(--is-color-#{$theme}), 
+							var(--is-color-#{$theme}-light10), 
+							var(--is-color-#{$theme}-inverse)
+						);
+					}
+				}
 			}
 		}
 	}
@@ -235,5 +59,3 @@
 		background-color: #7772;
 	}
 }
-
-

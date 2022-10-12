@@ -6,7 +6,8 @@
     "rollup": "rollup -c",
     "watch:sass": "node-sass -rw src -o src --output-style compressed",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=fc7ce09a1f9e"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,9 @@
     "library",
     "css"
   ],
-  "author": "Indra",
+  "author": {
+    "name": "Indra"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/indrasaswita/react-style-lib/issues"
@@ -27,6 +30,11 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-react": "^7.18.6",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@rollup/plugin-commonjs": "^23.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@rollup/plugin-typescript": "^9.0.0",
@@ -40,6 +48,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.21",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.10.2",
     "file-system-cache": "^2.0.0",
     "node-sass": "^7.0.3",
     "postcss": "^8.4.17",
@@ -56,5 +65,7 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "readme": "ERROR: No README data found!",
+  "_id": "react-style-template@0.0.20"
 }
