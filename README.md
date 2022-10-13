@@ -18,9 +18,18 @@ A customized style library of React. You can install this package from [npm](htt
 3. Then you can login to npm by using terminal. Just typing `npm login`, then you can fill username, password, email, and OTP. Once will be enough, you don't need to do it twice or more. *Or if you have no account yet, you can go to [NPM Website](https://www.npmjs.com/) to sign up*
 4. When you are logged in, you can publish your library through npm by using `npm publish`.
 
-### Others
+## Stacks
+Several stacks are used in this project:
+1. [Rollup](https://rollupjs.org/), for bundling the package.
+2. [NPM](https://www.npmjs.com/), as a package publisher.
+3. [React](https://reactjs.org/), the basic FE library of this project, and I prefer choose typescript for a big project.
+4. [SASS](https://sass-lang.com/), CSS precompiler engine, also I choose node-sass.
+5. [FontAwesome](https://fontawesome.com/), simplify the input of icons.
+6. [Storybook](https://storybook.js.org/), to view my components instead of installing react in this project.
+
+## Others
 It's my personal library. You can visit:
-1. (Alex's Lesson)[https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe] as my original tutorial. 
-2. (Atomic Design)[https://atomicdesign.bradfrost.com/chapter-2/]
+1. [Alex's Lesson](https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe) as my original tutorial. 
+2. [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/)
 
 Hope this help! And I also open for further discussion.
