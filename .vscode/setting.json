@@ -15,5 +15,11 @@
 	"liveSassCompile.settings.autoprefix": [
 		"> 1%",
 		"last 2 versions"
+	],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.workingDirectories": [
+		"src/*"
 	]
 }

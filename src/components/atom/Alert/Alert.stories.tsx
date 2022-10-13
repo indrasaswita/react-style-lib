@@ -1,14 +1,14 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react"
+import { ComponentStory, ComponentMeta } from "@storybook/react"
 
-import Alert from './Alert';
-import { EnumTheme } from '../../shared';
+import Alert, { AlertProps } from "./Alert"
+import { EnumTheme } from "../../shared"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'is-style/Alert',
-  component: Alert,
-} as ComponentMeta<typeof Alert>;
+	title: "is-style/Alert",
+	component: Alert,
+} as ComponentMeta<typeof Alert>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Alert> = (args: any) => {
@@ -24,10 +24,10 @@ const Template: ComponentStory<typeof Alert> = (args: any) => {
 				.fill(0)
 				.map((
 					_: number,
-					index: number
+					index: number,
 				) => {
 					return (
-						<Alert 
+						<Alert
 							key={index}
 							{...args}
 							style={{
@@ -43,21 +43,37 @@ const Template: ComponentStory<typeof Alert> = (args: any) => {
 	)
 }
 
-export const Default = Template.bind({});
-export const Primary = Template.bind({});
-export const Secondary = Template.bind({});
-export const Danger = Template.bind({});
-export const Warning = Template.bind({});
-export const Success = Template.bind({});
-export const Info = Template.bind({});
-export const Muted = Template.bind({});
+export const Default
+	: ComponentStory<React.FC<AlertProps>>
+	= Template.bind({})
+export const Primary
+	: ComponentStory<React.FC<AlertProps>>
+	= Template.bind({})
+export const Secondary
+	: ComponentStory<React.FC<AlertProps>>
+	= Template.bind({})
+export const Danger
+	: ComponentStory<React.FC<AlertProps>>
+	= Template.bind({})
+export const Warning
+	: ComponentStory<React.FC<AlertProps>>
+	= Template.bind({})
+export const Success
+	: ComponentStory<React.FC<AlertProps>>
+	= Template.bind({})
+export const Info
+	: ComponentStory<React.FC<AlertProps>>
+	= Template.bind({})
+export const Muted
+	: ComponentStory<React.FC<AlertProps>>
+	= Template.bind({})
 
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Default.args = { theme: EnumTheme.Default };
-Primary.args = { theme: EnumTheme.Primary };
-Secondary.args = { theme: EnumTheme.Secondary };
-Danger.args = { theme: EnumTheme.Danger };
-Warning.args = { theme: EnumTheme.Warning };
-Success.args = { theme: EnumTheme.Success };
-Info.args = { theme: EnumTheme.Info };
-Muted.args = { theme: EnumTheme.Muted };
+Default.args = { theme: EnumTheme.Default }
+Primary.args = { theme: EnumTheme.Primary }
+Secondary.args = { theme: EnumTheme.Secondary }
+Danger.args = { theme: EnumTheme.Danger }
+Warning.args = { theme: EnumTheme.Warning }
+Success.args = { theme: EnumTheme.Success }
+Info.args = { theme: EnumTheme.Info }
+Muted.args = { theme: EnumTheme.Muted }

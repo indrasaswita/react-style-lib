@@ -48,7 +48,7 @@ const Button
 							{props.leftIcon}
 						</div>
 					)}
-				<div 
+				<div
 					className={
 						"is-button-text"
 						+ (props.textAlign
