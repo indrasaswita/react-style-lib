@@ -25,7 +25,7 @@ Several stacks are used in this project:
 3. [React](https://reactjs.org/), the basic FE library of this project, and I prefer choose typescript for a big project.
 4. [SASS](https://sass-lang.com/), CSS precompiler engine, also I choose node-sass.
 5. [FontAwesome](https://fontawesome.com/), simplify the input of icons.
-6. [Storybook](https://storybook.js.org/), to view my components instead of installing react in this project.
+6. [Storybook](https://storybook.js.org/), to [view my components](https://6346e34e47d120b2ec6d0c74-drhbckhujp.chromatic.com/) instead of installing react in this project.
 
 ## Others
 It's my personal library. You can visit:
